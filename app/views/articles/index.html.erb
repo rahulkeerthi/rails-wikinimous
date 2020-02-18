@@ -1,0 +1,15 @@
+<div class="nav bg-info d-flex align-items-center justify-content-between p-3">
+  <h1 class="text-light">Wiki Wiki Wild Wild West</h1>
+  <p class="new-article"><%= link_to "New Article", new_article_path, :class => "text-decoration-none text-light font-weight-bolder" %></p>
+</div>
+<div class="bg-light">
+  <div class="container py-3">
+    <% @articles.each do |article| %>
+      <ul class="list-group">
+        <li class="list-group-item" id="list"><span class="font-weight-bolder"><%= link_to article.title, article, :class => "text-decoration-none text-dark" %></span>
+        | <%= link_to fa_icon("pencil"), edit_article_path(article), :class => "text-decoration-none text-dark" %>
+        | <%= link_to fa_icon("trash"), article, :class => "text-decoration-none text-dark", method: :delete, data: { confirm: 'Are you sure?' } %></li>
+      </ul>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="nav bg-info d-flex align-items-center justify-content-between p-3">
+  <h1 class="pt-3 text-light font-weight-bolder"><%= @article.title %> </h1>
+  <span><%= link_to 'Edit', edit_article_path(@article), :class => "text-light text-decoration-none font-weight-bolder" %></span>
+</div>
+<hr>
+<div class="container">
+  <p class=""><%= @article.content %></p>
+  <p><%= link_to 'Back', articles_path, :class => "text-decoration-none text-primary" %></p>
+</div>

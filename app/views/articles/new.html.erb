@@ -1,0 +1,9 @@
+<div class="nav bg-info d-flex align-items-center justify-content-between p-3">
+  <h1 class="text-light">New Article</h1>
+</div>
+
+<div class="container py-3">
+  <%= render 'form', article: @article %>
+  <hr>
+  <p><%= link_to 'Discard and Go Back', articles_path, :class => "text-decoration-none text-danger font-weight-bolder" %></p>
+</div>
